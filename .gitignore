@@ -1,2 +1,11 @@
 *.o
 *.exe
+*.so
+*.pyd
+*.dll
+*.egg-info/
+build/
+dist/
+__pycache__/
+.pytest_cache/
+.tmp/

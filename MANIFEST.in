@@ -1,0 +1,4 @@
+include LICENSE
+include README.python.md
+recursive-include melpe *.c *.h
+recursive-include src/melpe_artifacts *.c *.py
