@@ -3,7 +3,7 @@
 Cross-platform Python wrapper for applying MELPe 1200 bps compression
 artifacts to NumPy arrays and PyTorch tensors.
 
-!! WARNING, THIS WRAPPER IS COMPLETELY WRITTEN BY A.I. !!
+!! WARNING, THIS WRAPPER IS COMPLETELY WRITTEN BY A.I. !! \
 It's only tested on Windows, and achieves near-identical results on PESQ 
 and ESTOI, compared to the 1200bps clip from the official MELPe website.
 
