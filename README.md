@@ -3,7 +3,9 @@
 Cross-platform Python wrapper for applying MELPe 1200 bps compression
 artifacts to NumPy arrays and PyTorch tensors.
 
-            This wrapper is completely written by A.I.
+!! WARNING, THIS WRAPPER IS COMPLETELY WRITTEN BY A.I. !!
+It's only tested on Windows, and achieves near-identical results on PESQ 
+and ESTOI, compared to the 1200bps clip from the official MELPe website.
 
 This repository adapts the GPL-3.0 MELPe codec sources from
 [Rhizomatica/melpe](https://github.com/Rhizomatica/melpe) into a small
