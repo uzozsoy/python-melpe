@@ -62,7 +62,7 @@ def simulate_melpe(
 def _require_native():
     if _melpe_native is None:
         raise ImportError(
-            "melpe_artifacts native extension is not built. "
+            "python_melpe native extension is not built. "
             "Install this package with `python -m pip install .` on a machine "
             "with a working C compiler."
         ) from _NATIVE_IMPORT_ERROR

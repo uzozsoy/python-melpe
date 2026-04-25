@@ -8,7 +8,7 @@ from setuptools import Extension, find_packages, setup
 
 ROOT = Path(__file__).parent.resolve()
 MELPE_DIR = ROOT / "melpe"
-PACKAGE_DIR = ROOT / "src" / "melpe_artifacts"
+PACKAGE_DIR = ROOT / "src" / "python_melpe"
 
 
 def rel(path: Path) -> str:
@@ -30,7 +30,7 @@ define_macros = (
 libraries = [] if os.name == "nt" else ["m"]
 
 extension = Extension(
-    "melpe_artifacts._melpe_native",
+    "python_melpe._melpe_native",
     sources=[rel(PACKAGE_DIR / "_melpe_native.c"), *melpe_sources],
     include_dirs=[".", "melpe"],
     define_macros=define_macros,
@@ -40,7 +40,7 @@ extension = Extension(
 )
 
 setup(
-    name="melpe-artifacts",
+    name="python-melpe",
     version="0.1.0",
     description="Cross-platform MELPe artifact simulator for NumPy and PyTorch audio arrays",
     long_description=(ROOT / "README.md").read_text(encoding="utf-8"),

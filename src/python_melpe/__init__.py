@@ -1,17 +1,9 @@
-from warnings import warn
-
-from python_melpe import (
+from .core import (
     ALGORITHMIC_DELAY_SAMPLES,
     FRAME_SAMPLES,
     SAMPLE_RATE_HZ,
     is_available,
     simulate_melpe,
-)
-
-warn(
-    "`melpe_artifacts` is deprecated; use `python_melpe` instead.",
-    DeprecationWarning,
-    stacklevel=2,
 )
 
 __all__ = [

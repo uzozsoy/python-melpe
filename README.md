@@ -1,4 +1,4 @@
-# MELPe Artifacts
+# python-melpe
 
 Cross-platform Python wrapper for applying MELPe 1200 bps compression
 artifacts to NumPy arrays and PyTorch tensors.
@@ -37,11 +37,15 @@ The package builds a CPython native extension from the MELPe C sources.
 - Ubuntu: `build-essential` and Python development headers
 - Windows: Visual Studio Build Tools with the C++ workload
 
+Install name: `python-melpe`
+
+Import name: `python_melpe`
+
 ## Usage
 
 ```python
 import numpy as np
-import melpe_artifacts as melpe
+import python_melpe as melpe
 
 audio = np.random.randn(8000).astype(np.float32) * 0.05
 artifacted = melpe.simulate_melpe(audio, sample_rate=8000)
@@ -51,7 +55,7 @@ With PyTorch:
 
 ```python
 import torch
-import melpe_artifacts as melpe
+import python_melpe as melpe
 
 audio = torch.randn(2, 8000, dtype=torch.float32) * 0.05
 artifacted = melpe.simulate_melpe(audio, sample_rate=8000)
@@ -81,10 +85,10 @@ Round-trip audio through MELPe and return only the decoded waveform.
 
 Other exported helpers:
 
-- `melpe_artifacts.is_available()`
-- `melpe_artifacts.FRAME_SAMPLES`
-- `melpe_artifacts.SAMPLE_RATE_HZ`
-- `melpe_artifacts.ALGORITHMIC_DELAY_SAMPLES`
+- `python_melpe.is_available()`
+- `python_melpe.FRAME_SAMPLES`
+- `python_melpe.SAMPLE_RATE_HZ`
+- `python_melpe.ALGORITHMIC_DELAY_SAMPLES`
 
 ## Implementation Notes
 

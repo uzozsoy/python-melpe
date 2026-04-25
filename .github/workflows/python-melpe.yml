@@ -43,4 +43,4 @@ jobs:
         run: python -m pip install .
 
       - name: Smoke test
-        run: python -c "import numpy as np; import melpe_artifacts as melpe; x = np.linspace(-0.5, 0.5, 8000, dtype=np.float32); y = melpe.simulate_melpe(x, sample_rate=8000); assert melpe.is_available(); assert y.shape == x.shape; assert y.dtype == x.dtype; print(float(np.max(np.abs(y))))"
+        run: python -c "import numpy as np; import python_melpe as melpe; x = np.linspace(-0.5, 0.5, 8000, dtype=np.float32); y = melpe.simulate_melpe(x, sample_rate=8000); assert melpe.is_available(); assert y.shape == x.shape; assert y.dtype == x.dtype; print(float(np.max(np.abs(y))))"
